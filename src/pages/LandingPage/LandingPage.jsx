@@ -1,6 +1,6 @@
 import "./LandingPage.css";
 import Nav from "../../component/Nav/Nav";
-import extinguisher from "../../assets/vecteezy_fire-alarm-vector-illustration-isolated-on-white-background_9314961 (1).png";
+import extinguisher from "../../assets/vecteezy_minimalist-blue-air-humidifier-design_54484677.png";
 import { Link } from "react-router-dom";
 import Features from "../../component/Features/Features";
 
