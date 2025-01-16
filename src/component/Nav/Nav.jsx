@@ -8,7 +8,7 @@ const Nav = () => {
   const [scrollspyVal, setScrollspyVal] = useState("home");
 
   return (
-    <Navbar className="bg-transparent" fluid={true} rounded={true}>
+    <Navbar className="bg-transparent " fluid={true} rounded={true}>
       <Navbar.Brand href="https://flowbite.com/">
         <img class="h-20" src={logo} alt="Fireeye Logo" />
         <span className="brand-text-one self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
@@ -18,10 +18,10 @@ const Nav = () => {
       <Navbar.Toggle />
       <Navbar.Collapse className="md:pr-16 pb-10 md:pt-8">
         <div className="flex flex-col md:flex-row md:items-center poppins-font">
-          <Navbar.Link onClick={() => setScrollspyVal("home")} href="#home" className="md:pr-9 ">
+          <Navbar.Link onClick={() => setScrollspyVal("home")} href="#home" className={scrollspyVal === "home"  ? "md:pr-9 text-red-400" : "md:pr-9  "}>
             Home
           </Navbar.Link>
-          <Navbar.Link  onClick={() => setScrollspyVal("features")} href="#features" className="md:pr-6">
+          <Navbar.Link  onClick={() => setScrollspyVal("features")} href="#features" className={scrollspyVal === "features" ? "md:pr-9 text-red-400" : "md:pr-9 "}>
             Features
           </Navbar.Link>
           <div>
