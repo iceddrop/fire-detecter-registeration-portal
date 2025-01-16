@@ -5,8 +5,8 @@ import { IoMdNuclear } from "react-icons/io";
 import { LuAlarmSmoke } from "react-icons/lu";
 const Features = () => {
     return (
-        <div className="pb-10">
-            <div className="flex justify-center items-center py-4">
+        <div className="pb-10" id="features">
+            <div className="flex justify-center items-center pt-16 pb-16">
                 <div className="h-px w-10 bg-black mr-1"></div>
                 <h2 className="text-center poppins-font text-3xl font-bold">Features</h2>
                 <div className="h-px w-10 bg-black ml-1"></div>

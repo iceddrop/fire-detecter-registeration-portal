@@ -2,7 +2,11 @@ import logo from "../../assets/9feae60ea81842259049ab0f27467b93-free-removebg-pr
 import { Navbar } from "flowbite-react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
 const Nav = () => {
+
+  const [scrollspyVal, setScrollspyVal] = useState("home");
+
   return (
     <Navbar className="bg-transparent" fluid={true} rounded={true}>
       <Navbar.Brand href="https://flowbite.com/">
@@ -14,13 +18,10 @@ const Nav = () => {
       <Navbar.Toggle />
       <Navbar.Collapse className="md:pr-16 pb-10 md:pt-8">
         <div className="flex flex-col md:flex-row md:items-center poppins-font">
-          <Navbar.Link href="#" className="md:pr-9 ">
+          <Navbar.Link onClick={() => setScrollspyVal("home")} href="#home" className="md:pr-9 ">
             Home
           </Navbar.Link>
-          <Navbar.Link href="#" className="md:pr-6">
-            About
-          </Navbar.Link>
-          <Navbar.Link href="#" className="md:pr-6">
+          <Navbar.Link  onClick={() => setScrollspyVal("features")} href="#features" className="md:pr-6">
             Features
           </Navbar.Link>
           <div>
