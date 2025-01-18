@@ -8,7 +8,7 @@ const Nav = () => {
   const [scrollspyVal, setScrollspyVal] = useState("home");
 
   return (
-    <Navbar className="bg-transparent " fluid={true} rounded={true}>
+    <Navbar className="bg-transparent" fluid={true} rounded={true}>
       <Navbar.Brand href="https://flowbite.com/">
         <img class="h-20" src={logo} alt="Fireeye Logo" />
         <span className="brand-text-one self-center whitespace-nowrap text-2xl font-semibold dark:text-white">

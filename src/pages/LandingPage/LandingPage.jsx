@@ -3,13 +3,11 @@ import Nav from "../../component/Nav/Nav";
 import extinguisher from "../../assets/vecteezy_minimalist-blue-air-humidifier-design_54484677.png";
 import { Link } from "react-router-dom";
 import Features from "../../component/Features/Features";
-import ScrollSpy from "react-ui-scrollspy";
 
 const LandingPage = () => {
 
-
   return (
-    <ScrollSpy scrollThrottle={100} useBoxMethod={false}>
+   
       <main>
         <div className="background w-full md:h-1/2 h-screen lg:h-screen">
           <div className="bg-slate-300 w-full md:h-1/2 h-full lg:h-full absolute opacity-50 z-40"></div>
@@ -47,9 +45,9 @@ const LandingPage = () => {
             />
           </div>
         </div>
-        <Features />
+        <Features id="features"/>
       </main>
-    </ScrollSpy>
+   
   );
 };
 
