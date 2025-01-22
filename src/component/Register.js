@@ -27,7 +27,7 @@ const Register = () => {
     e.preventDefault();
     try {
       await axios.post(
-        "https://backendfireeye-5.onrender.com/api/v1/FireAlarm/register",
+        "https://firereyesbackend-1.onrender.com/api/v1/FireAlarm/register",
         formData
       );
       alert("{validate-otp");
