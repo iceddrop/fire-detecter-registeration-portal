@@ -47,7 +47,7 @@ const ValidateOtp = () => {
       const payload = { otp, phonenumber };
       console.log("Sending payload:", payload); // Debugging purpose
       await axios.post(
-        "https://fireseysbackend-1.onrender.com/api/v1/FireAlarm/validate-otp",
+        "https://fireseysbackend-1.onrender.com/api/v1/FireEyes/validate-otp",
         payload
       );
 

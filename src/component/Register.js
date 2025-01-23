@@ -31,7 +31,7 @@ const Register = () => {
     try {
       setLoading(true);
       await axios.post(
-        "https://fireseysbackend-1.onrender.com/api/v1/FireAlarm/register",
+        "https://fireseysbackend-1.onrender.com/api/v1/FireEyes/register",
         formData
       );
       alert("{validate-otp");
