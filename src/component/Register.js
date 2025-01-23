@@ -5,11 +5,14 @@ import "./Register.css";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import logo from "../assets/9feae60ea81842259049ab0f27467b93-free-removebg-preview.png";
+import CircleLoader from "react-spinners/CircleLoader";
 
 const Register = () => {
   const [formData, setFormData] = useState({ name: "", phonenumber: "" });
   const [error, setError] = useState("");
   const [notification, setNotification] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [color, setColor] = useState("#ffffff");
   const navigate = useNavigate();
   const ToastExample = () => {
     const showToast = () => {
@@ -26,6 +29,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       await axios.post(
         "https://fireseysbackend-1.onrender.com/api/v1/FireAlarm/register",
         formData
@@ -36,6 +40,7 @@ const Register = () => {
       });
     } catch (error) {
       console.error(error);
+      setLoading(false);
       setError("Failed to send OTP. Please try again.");
     }
   };
@@ -60,7 +65,6 @@ const Register = () => {
               onChange={handleChange}
               required
               placeholder="Enter your name"
-             
             />
           </div>
           <div className=" flex flex-col pt-4 w-60">
@@ -75,10 +79,24 @@ const Register = () => {
             />
           </div>
           <div className="flex justify-center pt-4 pb-6">
-            <button type="submit" className="py-2 px-4 text-white rounded-md bg-red-600">
-              Register
+            <button
+              type="submit"
+              className="py-2 px-4 text-white rounded-md bg-red-600"
+            >
+              {loading ? (
+                <CircleLoader
+                  loading={loading}
+                  size={30}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                  color={color}
+                />
+              ) : (
+                "Register"
+              )}
             </button>
           </div>
+
           {error && <p className="error text-center">{error}</p>}
         </form>
       </div>

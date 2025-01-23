@@ -3,6 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./ValidateOtp.css";
 import logo from "../assets/9feae60ea81842259049ab0f27467b93-free-removebg-preview.png"
+import CircleLoader from "react-spinners/CircleLoader";
 
 const ValidateOtp = () => {
   const [otp, setOtp] = useState("");
@@ -10,6 +11,8 @@ const ValidateOtp = () => {
   const [timeLeft, setTimeLeft] = useState(60); // 30 minutes in seconds
   const location = useLocation();
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [color, setColor] = useState("#ffffff");
 
   const phonenumber = location.state?.phonenumber;
 
@@ -40,6 +43,7 @@ const ValidateOtp = () => {
     e.preventDefault();
     setMessage("");
     try {
+      setLoading(true);
       const payload = { otp, phonenumber };
       console.log("Sending payload:", payload); // Debugging purpose
       await axios.post(
@@ -51,9 +55,11 @@ const ValidateOtp = () => {
       navigate("/Register");
     } catch (error) {
       console.error("Error response:", error.response?.data); // Debug backend error
+      setLoading(false);
       setMessage(
         error.response?.data?.message || "Invalid OTP. Please try again."
       );
+
     }
   };
 
@@ -94,7 +100,17 @@ const ValidateOtp = () => {
           </div>
           <div className="flex justify-center pt-4 pb-6">
             <button disabled={timeLeft === 0} type="submit" className="py-2 px-4 text-white rounded-md bg-green-600">
-              Validate
+            {loading ? (
+                <CircleLoader
+                  loading={loading}
+                  size={30}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                  color={color}
+                />
+              ) : (
+                "Validate"
+              )}
             </button>
           </div>
         </form>
