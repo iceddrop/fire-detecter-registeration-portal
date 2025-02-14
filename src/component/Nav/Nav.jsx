@@ -1,37 +1,44 @@
 import logo from "../../assets/9feae60ea81842259049ab0f27467b93-free-removebg-preview.png";
-import { Navbar } from "flowbite-react";
 import "./Nav.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Button, Navbar } from "flowbite-react";
 const Nav = () => {
-
   const [scrollspyVal, setScrollspyVal] = useState("home");
 
   return (
-    <Navbar className="bg-transparent" fluid={true} rounded={true}>
-      <Navbar.Brand href="https://flowbite.com/">
-        <img class="h-20" src={logo} alt="Fireeye Logo" />
-        <span className="brand-text-one self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
-          Fire<span className="brand-text-two text-red-600 ">Eyes</span>
-        </span>
-      </Navbar.Brand>
-      <Navbar.Toggle />
-      <Navbar.Collapse className="md:pr-16 pb-10 md:pt-8">
-        <div className="flex flex-col md:flex-row md:items-center poppins-font">
-          <Navbar.Link onClick={() => setScrollspyVal("home")} href="#home" className={scrollspyVal === "home"  ? "md:pr-9 text-red-400" : "md:pr-9  "}>
-            Home
-          </Navbar.Link>
-          <Navbar.Link  onClick={() => setScrollspyVal("features")} href="#features" className={scrollspyVal === "features" ? "md:pr-9 text-red-400" : "md:pr-9 "}>
-            Features
-          </Navbar.Link>
-          <div>
-            <Link to={'/register'} className="bg-red-600 text-white py-2 px-4 rounded-md">
+    <>
+          <Navbar fluid rounded class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-4 px-4">
+          <a
+          href="https://flowbite.com/"
+          class="flex items-center space-x-3 rtl:space-x-reverse"
+        >
+          <img src={logo} class="h-8" alt="FireEyes Logo" />
+          <span class="brand-text-one self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            Fire <span className="brand-text-two text-red-600 ">Eyes</span>
+          </span>
+        </a>
+        <div className="flex md:order-2">
+        <div className="flex item-center">
+            <Link
+              to={"/register"}
+              className="bg-red-600 text-white py-2 px-4 mr-6 rounded-md"
+            >
               Register
             </Link>
           </div>
+          <Navbar.Toggle />
         </div>
-      </Navbar.Collapse>
-    </Navbar>
+        <Navbar.Collapse>
+          <Navbar.Link href="#" active>
+            Home
+          </Navbar.Link>
+          <Navbar.Link href="#">Features</Navbar.Link>
+          <Navbar.Link href="#">Contact</Navbar.Link>
+        </Navbar.Collapse>
+      </Navbar>
+   
+    </>
   );
 };
 

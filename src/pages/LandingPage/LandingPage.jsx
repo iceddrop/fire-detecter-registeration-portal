@@ -3,18 +3,19 @@ import Nav from "../../component/Nav/Nav";
 import extinguisher from "../../assets/vecteezy_minimalist-blue-air-humidifier-design_54484677.png";
 import { Link } from "react-router-dom";
 import Features from "../../component/Features/Features";
+import Footer from "../../component/Footer/Footer";
 
 const LandingPage = () => {
 
   return (
    
       <main>
-        <div className="background w-full md:h-1/2 h-screen lg:h-screen">
-          <div className="bg-slate-300 w-full md:h-1/2 h-full lg:h-full absolute opacity-50 z-40"></div>
+        <div className="background w-full h-full md:h-1/2">
+          <div className="bg-slate-300 w-full h-[90%] absolute opacity-50 z-40"></div>
           <div className="z-50 relative">
             <Nav />
           </div>
-          <div className="z-50 relative flex justify-around items-center lg:pr-24 pb-10 lg:pb-0">
+          <div className="z-40 relative flex justify-around items-center mt-16 py-10">
             <div className="px-6 lg:px-20 xl:px-40">
               <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold headline-text">
                 The Future of Safety: Smoke, Gas Detection, SMS Alerts, and
@@ -46,8 +47,8 @@ const LandingPage = () => {
           </div>
         </div>
         <Features id="features"/>
+        <Footer/>
       </main>
-   
   );
 };
 
