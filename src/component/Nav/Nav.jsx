@@ -35,7 +35,7 @@ const Nav = () => {
           </Navbar.Link>
           <Navbar.Link href="#features"  onClick={() => setScrollspyVal('features')} className="cursor-pointer" >Features</Navbar.Link>
           <Navbar.Link href="#contact" onClick={() => setScrollspyVal('contact')} className="cursor-pointer" >Contact</Navbar.Link>
-          <Navbar.Link href="#" className="cursor-pointer"  >Team</Navbar.Link>
+          <Navbar.Link href="/team" className="cursor-pointer"  >Team</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
    
