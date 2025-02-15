@@ -1,4 +1,4 @@
-import "./LandingPage.css";
+import "./LandingPage.scss";
 import Nav from "../../component/Nav/Nav";
 import extinguisher from "../../assets/vecteezy_minimalist-blue-air-humidifier-design_54484677.png";
 import { Link } from "react-router-dom";
@@ -11,17 +11,17 @@ const LandingPage = () => {
    
       <main>
         <div className="background w-full h-full md:h-1/2">
-          <div className="bg-slate-300 w-full h-[90%] absolute opacity-50 z-40"></div>
+          
           <div className="z-50 relative">
             <Nav />
           </div>
-          <div className="z-40 relative flex justify-around items-center mt-16 py-10">
+          <div className="z-40 relative flex justify-around items-center mt-16 py-12 ">
             <div className="px-6 lg:px-20 xl:px-40">
-              <h1 className="text-2xl md:text-3xl xl:text-4xl font-bold headline-text">
+              <h1 className="text-2xl md:text-3xl xl:text-4xl text-white font-bold headline-text">
                 The Future of Safety: Smoke, Gas Detection, SMS Alerts, and
                 Automated Sprinklers All in One Device
               </h1>
-              <p className="text-center headline-text font-medium">
+              <p className="text-justify headline-text font-medium text-white">
                 Experience a new era of safety with our all-in-one detection and
                 response system. Designed to protect your loved ones and
                 property, this innovative device combines cutting-edge smoke and

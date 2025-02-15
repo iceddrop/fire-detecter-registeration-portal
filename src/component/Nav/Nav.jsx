@@ -35,6 +35,7 @@ const Nav = () => {
           </Navbar.Link>
           <Navbar.Link href="#">Features</Navbar.Link>
           <Navbar.Link href="#">Contact</Navbar.Link>
+          <Navbar.Link href="#">Team</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
    
