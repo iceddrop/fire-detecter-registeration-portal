@@ -76,13 +76,13 @@ const ValidateOtp = () => {
   return (
     <>
       <Breadcrumb aria-label="Default breadcrumb example" className="py-2 pl-2">
-        <Breadcrumb.Item href="/home" className="text-white" icon={HiHome}>
+        <Breadcrumb.Item href="/" className="text-white" icon={HiHome}>
           Home
         </Breadcrumb.Item>
-        <Breadcrumb.Item href="/register" className="text-white">
+        <Breadcrumb.Item href="/Register" className="text-white">
           Register
         </Breadcrumb.Item>
-        <Breadcrumb.Item href="/Validate-otp" className="text-white">
+        <Breadcrumb.Item href="/validate-otp" className="text-white">
           Validate
         </Breadcrumb.Item>
       </Breadcrumb>
