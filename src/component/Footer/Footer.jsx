@@ -4,7 +4,7 @@ import { FaTwitter, FaGithub, FaYoutube } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="">
+    <footer className="" id="contact">
       <div className="flex flex-col md:flex-row justify-center md:justify-around items-center">
         <a
           href="https://flowbite.com/"

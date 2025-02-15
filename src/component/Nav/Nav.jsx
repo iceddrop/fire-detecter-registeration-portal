@@ -10,7 +10,7 @@ const Nav = () => {
     <>
           <Navbar fluid rounded class="bg-white dark:bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-200 dark:border-gray-600 py-4 px-4">
           <a
-          href="https://flowbite.com/"
+          href="https://fire-detecter-registeration-portal.vercel.app"
           class="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <img src={logo} class="h-8" alt="FireEyes Logo" />
@@ -30,12 +30,12 @@ const Nav = () => {
           <Navbar.Toggle />
         </div>
         <Navbar.Collapse>
-          <Navbar.Link href="#" active>
+          <Navbar.Link href="#home"  onClick={() => setScrollspyVal('home')} className="cursor-pointer" active>
             Home
           </Navbar.Link>
-          <Navbar.Link href="#">Features</Navbar.Link>
-          <Navbar.Link href="#">Contact</Navbar.Link>
-          <Navbar.Link href="#">Team</Navbar.Link>
+          <Navbar.Link href="#features"  onClick={() => setScrollspyVal('features')} className="cursor-pointer" >Features</Navbar.Link>
+          <Navbar.Link href="#contact" onClick={() => setScrollspyVal('contact')} className="cursor-pointer" >Contact</Navbar.Link>
+          <Navbar.Link href="#" className="cursor-pointer"  >Team</Navbar.Link>
         </Navbar.Collapse>
       </Navbar>
    

@@ -6,6 +6,7 @@ import logo from "../assets/9feae60ea81842259049ab0f27467b93-free-removebg-previ
 import CircleLoader from "react-spinners/CircleLoader";
 import { Breadcrumb } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
+import Footer from "./Footer/Footer";
 
 const ValidateOtp = () => {
   const [otp, setOtp] = useState("");
@@ -133,6 +134,9 @@ const ValidateOtp = () => {
           </form>
           {message && <p className="message">{message}</p>}
         </div>
+      </div>
+      <div className="pt-6">
+      <Footer/>
       </div>
     </>
   );
