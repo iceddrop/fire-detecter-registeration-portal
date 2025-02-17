@@ -7,6 +7,9 @@ import CircleLoader from "react-spinners/CircleLoader";
 import { Breadcrumb } from "flowbite-react";
 import { HiHome } from "react-icons/hi";
 import Footer from "./Footer/Footer";
+import { Button , Modal } from "flowbite-react";
+import { HiOutlineExclamationCircle } from "react-icons/hi";
+import { Link } from "react-router-dom";
 
 const ValidateOtp = () => {
   const [otp, setOtp] = useState("");
@@ -16,7 +19,7 @@ const ValidateOtp = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
   const [color, setColor] = useState("#ffffff");
-
+  const [openModal, setOpenModal] = useState(false);
   const phonenumber = location.state?.phonenumber;
 
   useEffect(() => {
@@ -53,8 +56,7 @@ const ValidateOtp = () => {
         "https://fireseysbackend-1.onrender.com/api/v1/FireEyes/validate-otp",
         payload
       );
-
-      alert("OTP validated successfully! ");
+      setOpenModal('true')
       navigate("/Register");
     } catch (error) {
       console.error("Error response:", error.response?.data); // Debug backend error
@@ -138,6 +140,23 @@ const ValidateOtp = () => {
       <div className="pt-6">
       <Footer/>
       </div>
+
+      <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
+        <Modal.Header />
+        <Modal.Body>
+          <div className="text-center">
+            <HiOutlineExclamationCircle className="mx-auto mb-4 h-14 w-14 text-gray-400 dark:text-gray-200" />
+            <h3 className="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">
+              Are you sure you want to delete this product?
+            </h3>
+            <div className="flex justify-center gap-4">
+              <Button color="success" onClick={() => setOpenModal(false)}>
+                <Link to="/">{"OK"}</Link>
+              </Button>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };

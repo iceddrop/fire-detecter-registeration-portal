@@ -25,6 +25,7 @@ const Register = () => {
     };
   };
 
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -37,7 +38,6 @@ const Register = () => {
         "https://fireseysbackend-1.onrender.com/api/v1/FireEyes/register",
         formData
       );
-      alert("{validate-otp");
       navigate("/validate-otp", {
         state: { phonenumber: formData.phonenumber },
       });
