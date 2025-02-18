@@ -11,7 +11,8 @@ const LandingPage = () => {
       <div className="z-50 relative">
         <Nav />
       </div>
-      <div className="background w-full lg:pt-11" id="home">
+      <div className="relative background w-full" id="home">
+        <div className="bg-gray-700 opacity-[40%] w-full h-full absolute"></div>
         <div className="z-40 relative flex justify-around items-center mt-16 py-12 ">
           <div className="px-6 lg:px-20 xl:px-40">
             <h1 className="text-2xl md:text-3xl xl:text-4xl text-white font-bold headline-text">
