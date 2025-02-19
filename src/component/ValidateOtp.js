@@ -56,11 +56,10 @@ const ValidateOtp = () => {
         "https://fireseysbackend-1.onrender.com/api/v1/FireEyes/validate-otp",
         payload
       );
-      navigate("/Register");
+      setOpenModal('true')
     } catch (error) {
       console.error("Error response:", error.response?.data); // Debug backend error
       setLoading(false);
-      setOpenModal('true')
       setMessage(
         error.response?.data?.message || "Invalid OTP. Please try again."
       );
@@ -151,7 +150,7 @@ const ValidateOtp = () => {
             </h3>
             <div className="flex justify-center gap-4">
               <Button color="success" onClick={() => setOpenModal(false)}>
-                <Link to="/">{"OK"}</Link>
+                <Link to="/Register">{"OK"}</Link>
               </Button>
             </div>
           </div>
