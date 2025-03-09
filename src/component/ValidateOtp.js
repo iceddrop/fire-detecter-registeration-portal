@@ -150,7 +150,7 @@ const ValidateOtp = () => {
             </h3>
             <div className="flex justify-center gap-4">
               <Button color="success" onClick={() => setOpenModal(false)}>
-                <Link to="/Register">{"OK"}</Link>
+                <Link to="/Registert">{"OK"}</Link>
               </Button>
             </div>
           </div>
