@@ -9,10 +9,9 @@ const AppNav = () => {
   const [dropdownTriggered, setDropdownTriggered] = useState(false);
 
   const { sidebarOpened, openSidebar } = useStore();
-  console.log(sidebarOpened);
-
+ 
   return (
-    <div className="flex items-center bg-[#002244] text-white p-4 shadow-md ">
+    <div className="fixed w-full z-1 flex items-center bg-[#002244] text-white p-4 shadow-md ">
       <GiHamburgerMenu onClick={openSidebar} className="text-lg" />
       <div className="flex w-full justify-end items-center pr-4">
         <div className="relative">

@@ -12,8 +12,8 @@ const Sidebar = () => {
   const { sidebarOpened, closeSidebar } = useStore();
 
   return (
-    <div className={ sidebarOpened ? "relative flex h-full" : "hidden md:block"}>
-      <div className="absolute z-0 bg-[#002244] w-[200px] min-h-[100%] text-white pt-6 px-4 shadow-md">
+    <div className={ sidebarOpened ? "flex h-full" : "hidden md:block"}>
+      <div className="fixed z-2 bg-[#002244] w-[200px] min-h-[100%] text-white pt-6 px-4 shadow-md">
         <div className="w-full flex justify-center items-center">
           <span className="brand-text-one self-center whitespace-nowrap text-2xl font-semibold dark:text-white">
             Fire<span className="brand-text-two text-red-600 ">Eyes</span>

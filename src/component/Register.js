@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Register.scss";
@@ -34,7 +34,7 @@ const Register = () => {
     e.preventDefault();
     try {
       setLoading(true);
-      await axios.post(
+          await axios.post(   
         "https://fireseysbackend-1.onrender.com/api/v1/FireEyes/register",
         formData
       );
@@ -42,11 +42,16 @@ const Register = () => {
         state: { phonenumber: formData.phonenumber },
       });
     } catch (error) {
-      console.error(error);
+      
       setLoading(false);
       setError("Failed to send OTP. Please try again.");
     }
   };
+
+
+
+
+
 
   return (
     <>

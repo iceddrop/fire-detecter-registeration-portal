@@ -1,7 +1,14 @@
+import GuageChunk from "./Chunks/GaugeChunk";
+import AirQualityChunk from "./Chunks/AirQualityChunk";
+import RiskEvaluationsChunk from "./Chunks/RiskEvaluationsChunk/RiskEvaluationsChunk";
 const Home = () => {
+
     return (
-        <div className="w-full">
-            Home  
+        <div className="relative z-[-1] pt-12">
+            <div className="flex flex-col md:flex-row items-center md:justify-around">
+            <AirQualityChunk />
+            <RiskEvaluationsChunk />
+            </div>
         </div>
     )
 }
