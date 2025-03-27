@@ -57,7 +57,7 @@ const AirQualityChunk = () => {
 
   return (
     <div className="flex flex-col">
-      <h4 className="font-one font-bold pt-6 pl-8 text-xl md:pl-0">Air Quality</h4>
+      <h4 className="font-one font-bold py-6 pl-8 text-xl md:pl-0">Air Quality</h4>
       <div ref={containerRef} style={{ width: 370, height: 370 }} />
     </div>
   );

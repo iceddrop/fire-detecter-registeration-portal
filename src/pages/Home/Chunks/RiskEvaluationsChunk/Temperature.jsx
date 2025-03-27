@@ -33,7 +33,7 @@ const Temperature = () => {
         }, []);
     return (
            <div>
-            <h4 className="font-one font-bold">Temperature</h4>
+            <h4 className="font-one font-bold py-6">Temperature</h4>
                <div ref={containerRef} style={{ width: 300, height: 300 }} />
             </div>
     )

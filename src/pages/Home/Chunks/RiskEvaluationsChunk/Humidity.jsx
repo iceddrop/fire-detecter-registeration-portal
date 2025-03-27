@@ -23,7 +23,7 @@ const Humidity = () => {
 
   return (
     <div>
-      <h4 className="font-one font-bold">Humidity</h4>
+      <h4 className="font-one font-bold py-6">Humidity</h4>
       <div ref={containerRef} style={{ width: 300, height: 300 }} />
     </div>
   );
